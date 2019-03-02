@@ -1,3 +1,21 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`
+faisal is here dont happy :)
+faisal is here dont happy :)
+faisal is here dont happy :)
+########################################
+${client.user.tag} 
+${client.guilds.size} servers
+${client.channels.size} channel
+${client.users.size} users
+########################################
+https://discordapp.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot
+########################################`);
+});
+
 const temp = JSON.parse(fs.readFileSync('./temp.json', 'utf8')); //لازملك ملف temp.json اكتب بداخله {}
 client.on('message', async message => {
  if(message.channel.type === "dm") return;
@@ -76,3 +94,4 @@ client.on('message', async message => {
         if(err) console.error(err)
        })
       });
+client.login("NTI3MTg1NTE4NjczMjY0NjQx.D1rv7Q.CiPUsrQ5p8KppblOIMKHF0ITZwQ")
